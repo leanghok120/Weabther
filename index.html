@@ -20,11 +20,23 @@
           type="text"
           placeholder="Enter a city"
           class="input input-bordered w-full max-w-xs rounded-full"
+          id="city-input"
         />
-        <button class="btn btn-primary rounded-full">
+        <button class="btn btn-primary rounded-full" id="search-btn">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
+      <div class="flex flex-col justify-center items-center mt-5">
+        <img
+          src="./assets/rainy-3.svg"
+          alt="rainy"
+          class="w-52"
+          id="weather-emoji"
+        />
+        <h1 class="text-6xl font-bold" id="temp">0°C</h1>
+        <h2 class="text-3xl mt-3" id="city">Mars</h2>
+      </div>
     </main>
+    <script src="./script.js" type="module"></script>
   </body>
 </html>
