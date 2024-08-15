@@ -1,4 +1,4 @@
-let location = "miami";
+let location = "";
 
 const weatherEmoji = document.getElementById("weather-emoji");
 const temp = document.getElementById("temp");
@@ -19,7 +19,23 @@ async function getWeather() {
 
   const response = await fetch(apiUrl);
   const data = await response.json();
+  const main = data.weather[0].main;
+  let emoji = "";
 
+  if (main == "Clouds") {
+    emoji = "./assets/cloudy.svg";
+  }
+  if (main == "Rain") {
+    emoji = "./assets/rainy.svg";
+  }
+  if (main == "Clear") {
+    emoji = "./assets/day.svg";
+  }
+  if (main == "Snow") {
+    emoji = "./assets/snowy.svg";
+  }
+
+  weatherEmoji.src = emoji;
   temp.textContent = Math.trunc(data.main.temp) + "°C";
   city.textContent = data.name;
 }
