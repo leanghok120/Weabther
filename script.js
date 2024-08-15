@@ -1,3 +1,8 @@
+import cloudy from "./assets/cloudy.svg";
+import day from "./assets/day.svg";
+import rainy from "./assets/rainy.svg";
+import snowy from "./assets/snowy.svg";
+
 let location = "";
 
 const weatherEmoji = document.getElementById("weather-emoji");
@@ -23,16 +28,16 @@ async function getWeather() {
   let emoji = "";
 
   if (main == "Clouds") {
-    emoji = "./assets/cloudy.svg";
+    emoji = cloudy;
   }
   if (main == "Rain") {
-    emoji = "./assets/rainy.svg";
+    emoji = rainy;
   }
   if (main == "Clear") {
-    emoji = "./assets/day.svg";
+    emoji = day;
   }
   if (main == "Snow") {
-    emoji = "./assets/snowy.svg";
+    emoji = snowy;
   }
 
   weatherEmoji.src = emoji;
